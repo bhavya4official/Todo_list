@@ -1,0 +1,41 @@
+* {box-sizing: border-box;}
+/*allows us to include the padding and border in an element's total width and height.*/
+
+body {
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #aaa;
+  }
+  
+form {
+    width: 50%; 
+    margin: 30px auto;
+    border-radius: 5px; 
+    padding: 10px;
+    background: rgb(220, 232, 255);
+    border: 1px solid rgb(88, 87, 182);
+  }
+form p {
+    color: red;
+    margin: 0px;
+    font-size: 12px;
+  }
+
+.delete{
+    text-align: center;
+    color: green;
+  }
+.delete a{
+    color: white;
+    background: #a52a2a;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+
+.task_input { /*input box*/
+	width: 75%;
+	height: 15px; 
+	padding: 10px;
+	border: 2px solid rgb(43, 65, 139);
+}
