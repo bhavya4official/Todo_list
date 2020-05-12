@@ -1,0 +1,69 @@
+/* MySQL Database definition */
+
+mysql> show tables;
++-------------------+
+| Tables_in_task_db |
++-------------------+
+| task_table        |
+| user_table        |
++-------------------+
+
+mysql> describe task_table;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int(20)      | NO   | PRI | NULL    | auto_increment |
+| task    | varchar(30)  | YES  |     | NULL    |                |
+| comment | varchar(255) | YES  |     | NULL    |                |
+| image   | varchar(255) | YES  |     | NULL    |                |
+| uid     | int(30)      | YES  | MUL | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+
+mysql> describe user_table;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| uid      | int(30)      | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(30)  | YES  |     | NULL    |                |
+| email    | varchar(255) | YES  |     | NULL    |                |
+| uimage   | varchar(255) | YES  |     | NULL    |                |
+| password | varchar(32)  | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+
+mysql> select * from task_table;
++----+------------------+---------------------------------------------------------------------------------------+------------------------------------------------------+------+
+| id | task             | comment                                                                               | image                                                | uid  |
++----+------------------+---------------------------------------------------------------------------------------+------------------------------------------------------+------+
+|  7 | work             | home work                                                                             | Screenshot from 2020-01-27 18-44-21.png              |    3 |
+|  9 | test 9           | comment here                                                                          | task.jpeg                                            |    3 |
+| 10 | test 10          | Some text                                                                             | task-management-software.png                         |    3 |
+| 12 | new test         | new comment
+is here.                                                                 | task.jpeg                                            |    1 |
+| 13 | walk             | walk on board.                                                                        | colorful-flower-on-dark-tropical-260nw-721703848.jpg |    1 |
+| 14 | gyhjds           | uhs
+                                                                                 | Screenshot from 2020-01-24 18-58-01.png              |    1 |
+| 15 | Test for console |     Test for console Test for consoleTest for consoleTest for consoleTest for console |                                                      |    2 |
+| 16 | bbc              |                                                                                       |                                                      |    2 |
+| 17 | meet             |  meeting with golu.                                                                   |                                                      |    2 |
+| 18 | Anmol            | Going to school.                                                                      | smiley1.jpg                                          |    2 |
+| 19 | task1            | comment1                                                                              | image1                                               |    1 |
+| 20 | testing          | test comment                                                                          | Screenshot from 2020-01-06 16-31-55.png              | NULL |
+| 21 | qwq              |  qwqw                                                                                 | Screenshot from 2020-01-07 17-07-11.png              |    1 |
+| 22 | title2           | comment is here.                                                                      | task-management-software.png                         |    1 |
++----+------------------+---------------------------------------------------------------------------------------+------------------------------------------------------+------+
+
+
+mysql> select * from user_table;
++-----+--------+-----------------+--------+----------------------------------+
+| uid | name   | email           | uimage | password                         |
++-----+--------+-----------------+--------+----------------------------------+
+|   1 | Honey  | NULL            | NULL   | 2034f6e32958647fdff75d265b455ebf |
+|   2 | Sam    | sam@gmail.com   | NULL   | 827ccb0eea8a706c4c34a16891f84e7b |
+|   3 | tester | adaa@gamail.com | NULL   | a954c3a01de2f7f84d53a65019a15e01 |
+|   4 | qew    | qwew@domain.com | NULL   | a384b6463fc216a5f8ecb6670f86456a |
+|   5 | Mohit  | mohit@go.in     |        | a384b6463fc216a5f8ecb6670f86456a |
+|   6 | qewr   | ererw@were.er   |        | a384b6463fc216a5f8ecb6670f86456a |
+|   7 | rewre  | erwe@wer.wer    |        | 0586877cc0a648755950af2f17a083cc |
+|   9 | user   | user@abc.com    |        | 827ccb0eea8a706c4c34a16891f84e7b |
++-----+--------+-----------------+--------+----------------------------------+
+
